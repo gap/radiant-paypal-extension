@@ -1,0 +1,32 @@
+
+%h1 Products
+
+%p You can enter products here.
+
+%table{:cellspacing=>"0", :cellpadding=>"0", :border=>"0", :class=>"index", :id=>"links"}
+  %thead
+    %tr
+      %th.title
+        Title
+      %th.product
+        Name
+      %th.price
+        Price
+      %th.description
+        Description
+  %tbody
+    - @products.each do |product| 
+      %tr{:class=>'node level-1'}
+        %td.title
+          = link_to product.title, edit_admin_product_url(:id => product.id) 
+        %td.name
+          = product.name
+        %td.price
+          = number_to_currency(product.price)
+        %td.description
+          = product.description 
+        %td.remove
+          = link_to 'Remove', remove_admin_product_url(:id => product.id) 
+
+%p
+  = link_to "New product", {:action => :new} 

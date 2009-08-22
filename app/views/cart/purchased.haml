@@ -1,0 +1,58 @@
+
+%table
+  - @o.order_items.each do |item|
+    %tr
+      %td
+        = "#{item.quantity} - #{item.name}"
+
+%table
+  %tr
+    %td
+      Email Address
+    %td
+      = @o.email
+  %tr
+    %td
+      First Name
+    %td
+      = @o.first_name
+  %tr
+    %td
+      Last Name
+    %td
+      = @o.last_name
+  %tr
+    %td
+      Address
+    %td
+      = @o.address
+  %tr
+    %td
+      Address2
+    %td
+      = @o.address2
+  %tr
+    %td
+      City
+    %td
+      = @o.city
+  %tr
+    %td
+      State
+    %td
+      = @o.state
+  %tr
+    %td
+      Zip
+    %td
+      = @o.zip
+  %tr
+    %td
+      Country
+    %td
+      = @o.country
+  %tr
+    %td
+      Notes
+    %td
+      = @o.notes

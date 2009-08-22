@@ -1,0 +1,35 @@
+
+- form_for [:admin, @product] do |f| 
+  .form-area
+    .product_form_area
+      %table
+        %tr
+          %td
+            %label{:for=>"title"}
+              Title
+          %td
+            = f.text_field "title", :class => 'textbox', :maxlength => 20
+        %tr
+          %td
+            %label{:for=>"product_name"}
+              Name
+          %td
+            = f.text_field "name", :class => 'textbox', :maxlength => 20
+        %tr
+          %td
+            %label{:for=>"link_price"}
+              Price
+          %td
+            = f.text_field "price", :class => 'textbox', :maxlength => 10 
+        %tr
+          %td
+            %label{:for=>"link_description"}
+              Description
+          %td
+            = f.text_area "description", :class => 'textbox', :maxlength => 255, :rows=>2 
+          
+  %p.buttons
+    = save_model_button(@product)
+    = save_model_and_continue_editing_button(@product) 
+    or 
+    = link_to "Cancel", {:action => :index} 

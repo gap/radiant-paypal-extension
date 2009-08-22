@@ -1,0 +1,82 @@
+= Paypal
+
+Tags
+
+paypal:message
+	Creates a div
+	
+	Expand = Default stuff in the div
+	
+paypal:link
+	Creates a link to add the item to the cart
+	
+	Expand = The text for the link
+	title  = The product title
+	
+	BUGBUG We need to customize the render in add_item
+	
+paypal:total
+	The total of all the items in the cart
+	
+paypal:items:each
+	Loops through all the items in the cart
+	Expand = What will be displayed.  Can use the tags !cost, !price, !description, !name'
+	
+
+paypal:products:each
+	Loops through all the products
+	
+paypal:product
+	Describes a specific product.  
+  
+	title=Products title
+	Expand = Can use the tags !description, !name and !price 
+	
+paypal:card:express
+	Creates a link for express checkout
+  
+paypal:card:start_form
+	Starts a form for enter credit card information
+	
+paypal:card:end_form
+	Ends the credit card form
+	
+paypal:card:first_name
+	First Name for the checkout form
+
+paypal:card:last_name
+	Last Name for the checkout form
+
+paypal:card:number
+	Credit Card Number for the checkout form
+
+paypal:card:verification
+  	Verification number for checkout form
+
+paypal:card:address
+  	Address for checkout form
+
+paypal:card:address2
+	Address2 for checkout form
+
+paypal:card:city
+	City for checkout form
+
+paypal:card:state
+	State for checkout form
+
+paypal:card:zip
+	Zip for checkout form
+
+paypal:card:country
+	Country for checkout form
+
+paypal:card:notes
+	Notes for checkout form
+
+paypal:card:email
+  	Email for checkout form
+  	
+
+	
+
